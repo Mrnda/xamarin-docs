@@ -294,7 +294,7 @@ public class MainActivity : AppCompatActivity
     TextView msgText;
 ```
 
-The variables `CHANNEL_ID` and `NOTIFICATION_ID` will be used in the method [`CreateNotificationChannel`](#create-notification-channel-code) that will be added to `MainActivity` later on in this walkthrough.
+The variable `CHANNEL_ID` will be used in the method [`CreateNotificationChannel`](#create-notification-channel-code) and the variable   `NOTIFICATION_ID` will be used in the method [`SendNotification`](#sendnotification-method) which both will be added to `MainActivity` later on in this walkthrough. 
 
 
 In the following example, the `OnCreate` method will verify that Google
@@ -342,7 +342,7 @@ void CreateNotificationChannel()
         return;
     }
 
-    var channel = new NotificationChannel(MyFirebaseMessagingService.CHANNEL_ID,
+    var channel = new NotificationChannel(MainActivity.CHANNEL_ID,
                                           "FCM Notifications",
                                           NotificationImportance.Default)
                   {
